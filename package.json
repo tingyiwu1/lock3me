@@ -22,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build s3://lock3.me && npm run invalidate-cache",
+    "invalidate-cache": "aws cloudfront create-invalidation --distribution-id EE76R0Q5HE78G --path /*"
   },
   "eslintConfig": {
     "extends": [

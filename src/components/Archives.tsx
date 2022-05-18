@@ -1,11 +1,14 @@
-
+import { Toolbar, Typography } from "@mui/material";
 
 const Archives = () => {
     return (
         <>
-            archives page
+            <Toolbar />
+            <Typography>
+                [investigative research, book snippets, etc.]
+            </Typography>
         </>
-    )
-}
+    );
+};
 
-export default Archives
+export default Archives;

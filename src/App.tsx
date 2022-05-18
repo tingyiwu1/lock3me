@@ -10,6 +10,8 @@ import Staff from './components/Staff';
 import Visit from './components/Visit';
 import Contact from './components/Contact';
 import Archives from './components/Archives';
+import NavBar from './components/NavBar';
+import { Container } from '@mui/system';
 
 function App() {
     if (process.env.NODE_ENV === "development") {
@@ -19,16 +21,19 @@ function App() {
     }
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path={'/'} element={<Home />} />
-            <Route path={'/about'} element={<About />} />
-            <Route path={'/mission'} element={<Mission />} />
-            <Route path={'/staff'} element={<Staff />} />
-            <Route path={'/visit'} element={<Visit />} />
-            <Route path={'/contact'} element={<Contact />} />
-            <Route path={'/archives'} element={<Archives />} />
-            <Route path={'/*'} element={'not found'} />
-        </Routes>
+        <Container maxWidth={'md'}>
+            <NavBar />
+            <Routes>
+                <Route path={'/'} element={<Home />} />
+                <Route path={'/about'} element={<About />} />
+                <Route path={'/mission'} element={<Mission />} />
+                <Route path={'/staff'} element={<Staff />} />
+                <Route path={'/visit'} element={<Visit />} />
+                <Route path={'/contact'} element={<Contact />} />
+                <Route path={'/archives'} element={<Archives />} />
+                <Route path={'/*'} element={'not found'} />
+            </Routes>
+        </Container>
     </BrowserRouter>
   );
 }

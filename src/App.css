@@ -37,3 +37,7 @@
   }
 }
 
+::selection {
+    background-color: rgb(184,207,248);
+}
+

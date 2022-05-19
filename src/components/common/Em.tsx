@@ -1,14 +1,14 @@
 import React from "react";
 
-interface HdProps {
+interface EmProps {
     children: React.ReactNode;
 }
 
-const Hd = ({ children }: HdProps) => {
+const Em = ({ children }: EmProps) => {
     return (
         <span
             style={{
-                color: "white",
+                fontStyle: "italic",
             }}
         >
             {children}
@@ -16,4 +16,4 @@ const Hd = ({ children }: HdProps) => {
     );
 };
 
-export default Hd;
+export default Em;
